@@ -1,0 +1,18 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=1001
+
+I have modified the great 2html.vim script contained in the distribution for use with javadoc documents. My changes may be of use to others as well.
+
+Specific purpose: when creating Java API Documents with the -linksource option, the documents include copies of source code but (glaring omission) the html source pages are not syntax-highlighted.
+
+My changes to the 2html.vim script allow the resulting html documents to be exchanged with those in the src-html folder thus creating syntax-highlighted html pages in the API documentation.
+
+The key addition is the "id" attribute at the beginning of each code line so that every line of code can be reached like this: Hello.html#line.15.
+
+What was: <span class="lnr"> 11</span>
+is now: <span id="line.11" class="lnr"> 11</span>
+
+I also added the options of short_name and short_title so that Hello.java becomes Hello.html not Hello.java.html and that the html document title is the name of the source file.
+
+Please see my comments in the script.
+
+Note: I tried hard not to break anything in the existing script. I would appreciate any feedback. Thanks.
