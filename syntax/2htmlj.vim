@@ -203,7 +203,7 @@ if expand("%") == ""
   let s:source_file = "Untitled"
   new Untitled.html
 else
-  let s:source_file = expand("%")
+  let s:source_file = expand("%:t")
   if exists("short_name")
     new %:r.html
   else
